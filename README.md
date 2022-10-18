@@ -18,21 +18,21 @@ Node 14
 
 ### Clone repo
 
-''''''
+```
 git clone https://github.com/Adriancit0/napptilus-test.git
-''''''
+```
 
 ### Move to app root
 
-''''''
+```
 cd napptilus-test
-''''''
+```
 
 ### Install dependencies
 
-''''''
+```
 npm install
-''''''
+```
 
 ## Available Scripts
 
