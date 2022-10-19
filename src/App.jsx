@@ -20,7 +20,7 @@ const App = () => {
           }
         />
         <Route
-          path='/product-detail'
+          path='/product-detail/:productId'
           element={
             <Suspense fallback={<Loading />}>
               <ProductDetail />
