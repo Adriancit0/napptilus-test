@@ -5,7 +5,7 @@ import './style.css'
 const ProductCard = ({ product }) => {
   return (
     <li key={product.model} className='card'>
-      <Link to={`/product/${product.id}`} className='card__link'>
+      <Link to={`/product-detail/${product.id}`} className='card__link'>
         <picture className='card__picture'>
           <img
             className='card__image'
