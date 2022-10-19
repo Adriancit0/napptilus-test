@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { useState, useEffect } from 'react'
-
+import ProductCard from '../../components/ProductCard'
 import './style.css'
 
 const ProductList = () => {
@@ -11,21 +11,15 @@ const ProductList = () => {
     fetch(`${import.meta.env.VITE_API_REMOTE_URL}`)
       .then(response => response.json().then(data => setProducts(data)))
       .catch(error => console.log(error))
-    /* !localStorage.phones || localStorage.phones === 'undefined' || useRefreshData()
-      ? getPhones().then(data => {
-          localStorage.phones = JSON.stringify(data)
-          setPhones(data)
-        })
-      : setPhones(JSON.parse(localStorage.phones)) */
   }, [])
 
-  /* const filterBySearchValue = phones => {
+  const filterBySearchValue = phones => {
     return phones?.filter(
       phone =>
         phone.brand?.toLowerCase().includes(searchValue.toLowerCase()) ||
         phone.model?.toLowerCase().includes(searchValue.toLowerCase())
     )
-  } */
+  }
 
   return (
     <div className='product-list'>
@@ -39,12 +33,9 @@ const ProductList = () => {
         />
       </div>
       <ul className='product-list__grid'>
-        {products?.map((product, index) => {
-          return product.model
-        })}
-        {/* {filterBySearchValue(phones)?.map(phone => (
-          <PhoneCard phone={phone} key={phone.model} />
-        ))} */}
+        {filterBySearchValue(products)?.map(product => (
+          <ProductCard product={product} key={product.model} />
+        ))}
       </ul>
     </div>
   )
