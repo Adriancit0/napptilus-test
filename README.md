@@ -4,11 +4,12 @@ This SPA emulates a mobile phone store. It consists of two main views: product l
 
 It is part of the selection process for the position of frontend developer at Napptilus.
 
-## Tecnologías empleadas
+## Main technologies
 
 - The application has been developed with React js and Vite as a bundle.
 - Jest and testing-library for unit test and component tests.
 - Cypress for test 2e2.
+- react-icons for iconos svg`s
 
 ## Requirements
 
@@ -18,21 +19,21 @@ Node 14
 
 ### Clone repo
 
-''''''
+```
 git clone https://github.com/Adriancit0/napptilus-test.git
-''''''
+```
 
 ### Move to app root
 
-''''''
+```
 cd napptilus-test
-''''''
+```
 
 ### Install dependencies
 
-''''''
+```
 npm install
-''''''
+```
 
 ## Available Scripts
 

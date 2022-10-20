@@ -1,0 +1,15 @@
+.description{
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+}
+
+.description__property{
+    text-align: start;
+}
+
+.property__key{
+    font-weight: 700;
+}
