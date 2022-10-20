@@ -33,8 +33,8 @@ const ProductList = () => {
         />
       </div>
       <ul className='product-list__grid'>
-        {filterBySearchValue(products)?.map(product => (
-          <ProductCard product={product} key={product.model} />
+        {filterBySearchValue(products)?.map((product, index) => (
+          <ProductCard product={product} key={index} />
         ))}
       </ul>
     </div>

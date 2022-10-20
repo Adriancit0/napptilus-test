@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 :root {
+  margin-top: 5rem;
   --black: #2b2929 ;
   --primary-grey: #c0c0c0;
   --secondary-grey: #f6f6f6;
