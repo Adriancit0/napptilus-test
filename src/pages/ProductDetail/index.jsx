@@ -13,13 +13,12 @@ const ProductDetail = ({ cartProps }) => {
   useEffect(() => {
     getProductById(productId).then(data => setProduct(data))
   }, [])
-
   return (
     <section className='details'>
       <ProductImage imgUrl={product.imgUrl} model={product.imgUrl} />
       <div className='details__group'>
         <ProductDescription product={product} />
-        <ProductActions colors={product.colors} cartProps={cartProps} />
+        <ProductActions product={product} cartProps={cartProps} />
       </div>
     </section>
   )

@@ -1,5 +1,8 @@
-/* eslint-disable no-unused-vars */
+/* eslint-disable indent */
 import { useState, useEffect } from 'react'
+import { persistance } from '../../services/persistance'
+import { refreshData } from '../../services/refreshData'
+import { getProducts } from '../../api/products'
 import ProductCard from '../../components/ProductCard'
 import './style.css'
 
@@ -8,9 +11,14 @@ const ProductList = () => {
   const [searchValue, setSearchValue] = useState('')
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_REMOTE_URL}`)
-      .then(response => response.json().then(data => setProducts(data)))
-      .catch(error => console.log(error))
+    if (persistance.isEmpty('products') || refreshData()) {
+      getProducts().then(data => {
+        persistance.persist('products', data)
+        setProducts(data)
+      })
+      return
+    }
+    setProducts(persistance.get('products'))
   }, [])
 
   const filterBySearchValue = phones => {

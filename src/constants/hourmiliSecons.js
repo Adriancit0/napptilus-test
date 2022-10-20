@@ -1,0 +1,2 @@
+const HOUR_MILI_SECONDS = 3600000
+export default HOUR_MILI_SECONDS
