@@ -2,7 +2,7 @@ import './style.css'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 
-const Header = ({ productsCount }) => {
+const Header = ({ productCount }) => {
   return (
     <header className='header'>
       <Link to='/'>
@@ -10,6 +10,7 @@ const Header = ({ productsCount }) => {
       </Link>
       <span className='header__cart'>
         <AiOutlineShoppingCart data-testid='cart__icon' className='cart__icon' />
+        <div className='cart__count'>{productCount}</div>
       </span>
     </header>
   )

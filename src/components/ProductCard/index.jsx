@@ -1,4 +1,3 @@
-/* eslint-disable multiline-ternary */
 import { Link } from 'react-router-dom'
 import './style.css'
 
@@ -20,13 +19,15 @@ const ProductCard = ({ product }) => {
             <p className='title__model'>
               <u>{product.model}</u>
             </p>
-            {product.price ? (
+            {product.price
+              ? (
               <p className='details__price'>
                 {product.price}.00 <sub className='price__currency'>€</sub>
               </p>
-            ) : (
+                )
+              : (
               <p className='details__price'>N/A</p>
-            )}
+                )}
           </div>
         </section>
       </Link>

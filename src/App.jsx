@@ -1,5 +1,6 @@
-import React, { Suspense } from 'react'
+import React, { Suspense, useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { persistance } from './services/persistance'
 import Header from './components/Header'
 import './App.css'
 
@@ -9,9 +10,11 @@ const ProductDetail = React.lazy(() => import('./pages/ProductDetail'))
 const Loading = () => <p>Loading ...</p>
 
 const App = () => {
+  const [productCount, setProductCount] = useState(persistance.get('productCount') ?? 0)
+
   return (
     <BrowserRouter>
-      <Header />
+      <Header productCount={productCount} />
       <Routes>
         <Route
           path='/'
@@ -25,7 +28,7 @@ const App = () => {
           path='/product-detail/:productId'
           element={
             <Suspense fallback={<Loading />}>
-              <ProductDetail />
+              <ProductDetail setProductCount={setProductCount} />
             </Suspense>
           }
         />
