@@ -36,6 +36,6 @@
 .actions__submit-button:hover {
     color: rgb(210,73,54);
     background-color: white;
-    border: 0.2rem solid rgb(210,73,54);
+    border: 0.1rem solid rgb(210,73,54);
     transition: 0.5s;
   }
