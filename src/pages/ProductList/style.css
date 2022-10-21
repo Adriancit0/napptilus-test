@@ -18,12 +18,18 @@
 }
 
 .product-list__input{
-    padding: 1rem;
+    padding: 1.3rem;
     width: 50vw;
     height: 1rem;
     background-color: white;
     border-radius: 0.3rem;
     border: 0.1rem solid rgb(220, 220, 220);
+}
+
+.product-list__input:focus-visible{
+    box-shadow:2px 2px 4px rgb(210 73 54);
+    transition: 0.3s ;
+    outline: none;
 }
 
 @media (min-width: 768px){

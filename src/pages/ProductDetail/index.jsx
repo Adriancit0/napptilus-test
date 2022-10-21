@@ -6,7 +6,7 @@ import ProductImage from '../../components/ProductImage'
 import ProductActions from '../../components/ProductActions'
 import './style.css'
 
-const ProductDetail = ({ cartProps }) => {
+const ProductDetail = ({ setProductCount }) => {
   const [product, setProduct] = useState({})
   const { productId } = useParams()
 
@@ -18,7 +18,7 @@ const ProductDetail = ({ cartProps }) => {
       <ProductImage imgUrl={product.imgUrl} model={product.imgUrl} />
       <div className='details__group'>
         <ProductDescription product={product} />
-        <ProductActions product={product} cartProps={cartProps} />
+        <ProductActions product={product} setProductCount={setProductCount} />
       </div>
     </section>
   )

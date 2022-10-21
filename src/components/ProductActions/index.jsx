@@ -1,18 +1,16 @@
 import { useState, useEffect } from 'react'
+import { persistance } from '../../services/persistance'
 import './style.css'
 
-const ProductActions = ({ product, cartProps }) => {
+const ProductActions = ({ product, setProductCount }) => {
   const [colorCode, setColorCode] = useState(null)
   const [storageCode, setStorageCode] = useState(null)
 
   const selectColor = color => {
-    console.log(color)
     setColorCode(parseInt(color))
   }
 
   const selectStorage = memory => {
-    console.log(memory)
-
     setStorageCode(parseInt(memory))
   }
 
@@ -23,8 +21,8 @@ const ProductActions = ({ product, cartProps }) => {
 
   const submitData = {
     id: product.id,
-    colorCode: colorCode,
-    storageCode: storageCode
+    colorCode,
+    storageCode
   }
   const handleSubmit = event => {
     event.preventDefault()
@@ -35,9 +33,13 @@ const ProductActions = ({ product, cartProps }) => {
       },
       body: JSON.stringify(submitData)
     })
-      .then(response => console.log(response))
+      .then(response => {
+        response.json().then(data => {
+          persistance.persist('productCount', persistance.get('productCount') + data.count)
+          setProductCount(persistance.get('productCount'))
+        })
+      })
       .catch(error => console.error(error))
-    cartProps.setProductsCount(cartProps.productsCount + 1)
   }
 
   return (

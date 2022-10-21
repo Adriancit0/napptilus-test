@@ -1,4 +1,3 @@
-/* eslint-disable indent */
 import { useState, useEffect } from 'react'
 import { persistance } from '../../services/persistance'
 import { refreshData } from '../../services/refreshData'

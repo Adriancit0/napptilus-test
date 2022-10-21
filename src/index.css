@@ -1,20 +1,11 @@
 @charset "UTF-8";
 
 :root {
-  margin-top: 5rem;
+  margin-top: 7rem;
   --black: #2b2929 ;
   --primary-grey: #c0c0c0;
   --secondary-grey: #f6f6f6;
   --primary-type: Arial, Helvetica, sans-serif;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  * {
-    -webkit-animation: none !important;
-            animation: none !important;
-    -webkit-transition: none !important;
-    transition: none !important;
-  }
 }
 
 * {

@@ -4,16 +4,23 @@ This SPA emulates a mobile phone store. It consists of two main views: product l
 
 It is part of the selection process for the position of frontend developer at Napptilus.
 
+This app has been developed trying to maintain SOLID principles, a responsive design and BEM methodology.
+
 ## Main technologies
 
 - The application has been developed with React js and Vite as a bundle.
 - Jest and testing-library for unit test and component tests.
 - Cypress for test 2e2.
 - react-icons for iconos svg`s
+- BEM methodology
+  -Responsive desugn
 
 ## Requirements
 
-Node 14
+### Node.js
+
+Recomended last stable version (LTS) for your OS
+[https://nodejs.org/en/download/](https://nodejs.org/en/)
 
 ## Getting started
 
