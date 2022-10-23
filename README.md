@@ -11,9 +11,22 @@ This app has been developed trying to maintain SOLID principles, a responsive de
 - The application has been developed with React js and Vite as a bundle.
 - Jest and testing-library for unit test and component tests.
 - Cypress for test 2e2.
-- react-icons for iconos svg`s
+- react-icons for svg`s icons
 - BEM methodology
-  -Responsive desugn
+- Responsive design
+
+### Project structure
+
+```
+src
+├── api
+├── components
+├── constants
+├── mocks
+├── pages
+├── services
+├── storage
+```
 
 ## Requirements
 
