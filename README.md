@@ -77,3 +77,7 @@ Launches the e2e test runner.\
 ### `npm run lint`
 
 Launches code lint.\
+
+## Deploy
+
+Currently this project is deployed with vercel in [https://napptilus-test.vercel.app/](https://napptilus-test.vercel.app/)
